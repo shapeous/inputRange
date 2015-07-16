@@ -16,5 +16,12 @@
   </head>
   <body>
     <p>Hello world! This is HTML5 Boilerplate.</p>
+    <script>
+      Modernizr.load({
+        test: Modernizr.inputtypes.range,
+        yep : 'js/yepRange.js',
+        nope: 'js/nopRange.js'
+      });
+    </script>
   </body>
 </html>
