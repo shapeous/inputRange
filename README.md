@@ -1,10 +1,12 @@
 # inputRange
-Attempting to create a display only input range polyfill
+A display only input range polyfill
 
-Steps:
-- [x] Test if input range is available
-- [x] Conditionally load (bonus) separate JavaScript files
-- [x] Will hidden make them disappear in such a way I can have something else occupying its former space.
-- [x] Create JavaScript code to load the data
-- [x] Modify the input range to hide it
-- [x] draw a span and use it as the basis to draw the polyfill range
+Tested successfully on:
+- [x] IE9
+
+To use, the input needs to:
+- [ ] Be of type range: for obvious reasons ;)
+- [ ] Not be hidden: If I hide an input range, I want the polyfill to ignore it.
+- [ ] Be disabled: This is a display only polyfill, I have no logic to handle value changes.
+- [ ] Have defined min, value, and max attributes: Otherwise it will ignore it.
+- [ ] Have a span element to the right of it: This is where the polyfill is drawn.
