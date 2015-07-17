@@ -15,12 +15,22 @@
     <script src="js/vendor/modernizr-2.8.3.js"></script>
   </head>
   <body>
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <article>
+      <h1>Hello HTML5 Boilerplate!</h1>
+      <hr>
+      <form>
+        Name: <input type="text" placeholder="Enter your name"><br>
+        Range with value: [<input type="range" min="118" max="132" value="125">]<br>
+        Range with value: [<input type="range" min="118" max="132" value="125" hidden="hidden">]<br>
+      </form>
+    </article>
     <script>
-      Modernizr.load({
-        test: Modernizr.inputtypes.range,
-        yep : 'js/yepRange.js',
-        nope: 'js/nopRange.js'
+      Modernizr.load(
+      { test: !Modernizr.inputtypes.range
+      , nope: 'js/nopRange.js'
+      , complete: function() {
+        
+      }
       });
     </script>
   </body>
