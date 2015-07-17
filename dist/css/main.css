@@ -99,7 +99,11 @@ body {
   margin: 0.5em;
 }
 
-
+span.range {
+  padding-right:  .25em;
+  padding-left:   .25em;
+  letter-spacing:-.10em;
+}
 
 
 
