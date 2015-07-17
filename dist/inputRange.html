@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
+    <title>inputRangePolyfill.js</title>
+    <meta name="description" content="display-only input range polyfill">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -20,8 +20,9 @@
       <hr>
       <form>
         Name: <input type="text" placeholder="Enter your name"><br>
-        Range with value: 118<input type="range" min="118" value="122" max="132"><span></span>132<br>
-        Range with value: 118<input type="range" min="118" value="128" max="132"><span></span>132<br>
+        Range1: 118<input type="range" min="118" value="122" max="132" disabled><span></span>132<br>
+        Range2: 118<input type="range" min="118" value="122" max="132" disabled hidden><span></span>132<br>
+        Range3: 118<input type="range" min="118" value="128" max="132" disabled><span></span>132<br>
       </form>
     </article>
     <script>
