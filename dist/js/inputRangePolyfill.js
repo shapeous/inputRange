@@ -1,3 +1,4 @@
+(function(){
 // inputRangePolyfill.js
 // Repo: https://github.com/shapeous/inputRange
 
@@ -6,7 +7,7 @@ var input = document.getElementsByTagName("input");
 
 for (var i = 0; i < input.length; i += 1) {
   // Does the current input meet the following criteria?
-  if (  input[i].attributes.type.value=== "range"
+  if (  input[i].getAttribute("type") === "range"
     &&  input[i].attributes.hidden    === undefined
     &&  input[i].attributes.disabled  !== undefined
     &&  input[i].getAttribute("min")  !== undefined
@@ -21,20 +22,25 @@ for (var i = 0; i < input.length; i += 1) {
     };
     // Let's also hide it so we can draw our polyfill
     input[i].setAttribute("hidden");
+    input[i].style.display = 'none';
     // Let's also get its neighboring span
     // (right now we need to have one to the right of the range) and so todo: Check if it exist first maybe even add it...
     var span = input[i].nextSibling;
     // Let's add a class name so we can style it
     span.setAttribute("class", "range");
+    span.style.setAttribute("letter-spacing","-2px");
+    span.style.setAttribute("padding-right","5px");
+    span.style.setAttribute("padding-left","5px");
     // draw the polyfill
     var str = "";
     for (var j = range.min; j < range.value; j += 1) {
       str = str.concat("=");
     }
     str = str.concat("[]");
-    for (var k = range.value; k < range.max; k += 1) {
+    for (var k = range.value + 1; k <= range.max; k += 1) {
       str = str.concat("=");
     }
-    span.textContent = str;
+    span.innerHTML = str;
   }
 }
+})();
