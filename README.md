@@ -2,7 +2,7 @@
 A display only input range polyfill
 
 Tested successfully on:
-- [x] IE9
+- [x] IE9 (including Document Mode: Quirks and all modes in between) 
 
 To use, the input needs to:
 - [ ] Be of type range: for obvious reasons ;)
