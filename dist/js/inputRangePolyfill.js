@@ -1,3 +1,4 @@
+(function(){
 // inputRangePolyfill.js
 // Repo: https://github.com/shapeous/inputRange
 
@@ -38,3 +39,4 @@ for (var i = 0; i < input.length; i += 1) {
     span.textContent = str;
   }
 }
+})();
